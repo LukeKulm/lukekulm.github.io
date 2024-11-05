@@ -158,6 +158,22 @@ section h2 {
   margin: 1rem 0;
 }
 
+.project-title {
+  color: #000;
+  /* Change this to the desired color */
+  text-decoration: none;
+  /* Remove underline */
+  font-weight: bold;
+  /* Optional: Make it bold */
+}
+
+.project-title:hover {
+  text-decoration: underline;
+  /* Optional: Underline on hover for feedback */
+  color: #007bff;
+  /* Optional: Change color on hover */
+}
+
 /* Contact Section */
 #contact {
   padding: 2rem 1rem;
