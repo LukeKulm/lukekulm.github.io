@@ -1,0 +1,197 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Basic Body Styling */
+body {
+  color: #333;
+  background-color: #f4f4f9;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  color: #ffffff;
+  background-image: url('assets/banner2.jpg');
+  background-size: cover;
+  background-position-y: -200px;
+  ;
+  padding: 4rem 1rem;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* Section Headers */
+section h2 {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  color: #333;
+  text-align: center;
+}
+
+/* About Section */
+#about {
+  padding: 2rem 1rem;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-content p {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+
+/* Skills Section */
+#skills {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  /* Center all text in this section */
+}
+
+#skills h2 {
+  margin-bottom: 1rem;
+  /* Add some spacing below the main title */
+}
+
+#skills h3 {
+  margin-top: 1rem;
+  /* Add some spacing above the skill category titles */
+  margin-bottom: 0.5rem;
+  /* Add spacing below the titles */
+}
+
+#skills ul {
+  list-style-type: none;
+  /* Remove default list styling */
+  padding: 0;
+  /* Remove padding */
+  display: inline-block;
+  /* Center the list */
+}
+
+#skills li {
+  margin: 0.5rem 0;
+  /* Add vertical spacing between skills */
+}
+
+
+/* Projects Section */
+#projects {
+  padding: 2rem 1rem;
+}
+
+.project {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 700px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.project p {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.project-photo {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* Contact Section */
+#contact {
+  padding: 2rem 1rem;
+  background-color: #e8eaf6;
+  text-align: center;
+}
+
+#contact p {
+  margin: 0.5rem 0;
+}
+
+#contact a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  color: #ffd700;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Hover Effect for Projects */
+.project:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
