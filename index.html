@@ -103,11 +103,18 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:lbk73@cornell.edu">lbk73@cornell.edu</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/luke-kulm-394920237"
-        target="_blank">www.linkedin.com/in/luke-kulm-394920237</a></p>
+    <p>Email: <span class="email-obfuscate">lbk73 <em>at</em> cornell <em>dot</em> edu</span></p>
+    <p>LinkedIn: <span class="linkedin-obfuscate">linkedin <em>dot</em> com/in/luke-kulm-394920237</span></p>
     <p><a href="assets/resume.pdf" download>Download my resume</a></p>
   </section>
+
+  <style>
+    .email-obfuscate em,
+    .linkedin-obfuscate em {
+      font-style: normal;
+      text-decoration: underline;
+    }
+  </style>
 
   <footer>
     <p>&copy; 2024 Luke Kulm</p>
