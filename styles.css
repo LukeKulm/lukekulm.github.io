@@ -29,6 +29,10 @@ header {
   ;
   padding: 4rem 1rem;
   position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  /* Subtle shadow */
+  border-radius: 12px;
+  /* Rounded corners */
 }
 
 header h1 {
@@ -179,6 +183,17 @@ section h2 {
   height: auto;
   border-radius: 8px;
   margin-bottom: 1rem;
+  filter: grayscale(100%);
+  /* Start with black and white */
+  transition: filter 0.3s ease, transform 0.3s ease;
+  /* Smooth transition */
+}
+
+.project:hover .project-photo {
+  filter: grayscale(0%);
+  /* Full color on hover */
+  transform: scale(1.05);
+  /* Slight zoom effect on hover (optional) */
 }
 
 .project p {
