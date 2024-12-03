@@ -11,6 +11,12 @@ body {
   color: #333;
   background-color: #f4f4f9;
   line-height: 1.6;
+  background-image: url('assets/grainy.jpg');
+  /* Replace with your desired background */
+  background-attachment: fixed;
+  /* Fixes the background */
+  background-size: cover;
+  background-position: center;
 }
 
 /* Header Styling */
@@ -125,24 +131,49 @@ section h2 {
 }
 
 
-/* Projects Section */
 #projects {
   padding: 2rem 1rem;
+  position: relative;
+  height: 100vh;
+  /* Full viewport height */
+  overflow-y: scroll;
+  /* Enable scrolling for projects */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  /* Add spacing between projects */
+  align-items: center;
+  /* Center the projects horizontally */
 }
 
 .project {
-  background-color: #ffffff;
-  padding: 1rem;
-  margin: 1rem auto;
-  max-width: 700px;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  /* Semi-transparent white */
+  backdrop-filter: blur(10px);
+  /* Glass effect */
+  border-radius: 12px;
+  /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  padding: 1.5rem;
+  max-width: 600px;
+  width: 90%;
+  /* Responsive width */
   text-align: center;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project h3 {
-  font-size: 1.5rem;
-  color: #333;
+.project:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .project p {
@@ -150,13 +181,6 @@ section h2 {
   margin: 0.5rem 0;
 }
 
-.project-photo {
-  width: 100%;
-  max-width: 650px;
-  height: auto;
-  border-radius: 8px;
-  margin: 1rem 0;
-}
 
 .project-title {
   color: #000;
