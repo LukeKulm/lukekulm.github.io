@@ -142,17 +142,12 @@ section h2 {
 
 #projects {
   padding: 2rem 1rem;
-  position: relative;
-  height: 100vh;
-  /* Full viewport height */
-  overflow-y: scroll;
-  /* Enable scrolling for projects */
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  /* Use grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  /* Responsive grid */
   gap: 1.5rem;
-  /* Add spacing between projects */
-  align-items: center;
-  /* Center the projects horizontally */
+  /* Space between grid items */
 }
 
 .project {
