@@ -11,8 +11,7 @@ body {
   color: #333;
   background-color: #f4f4f9;
   line-height: 1.6;
-  background-image: url('assets/grainy.jpg');
-  /* Replace with your desired background */
+  background-image: url('assets/grainy2.png');
   background-attachment: fixed;
   /* Fixes the background */
   background-size: cover;
