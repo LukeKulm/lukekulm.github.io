@@ -11,12 +11,31 @@ body {
   color: #333;
   background-color: #f4f4f9;
   line-height: 1.6;
+  position: relative;
+  /* Required to position the pseudo-element */
+  z-index: 0;
+  /* Ensures the content remains on top */
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  /* Keeps the background fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('assets/grainy2.png');
-  background-attachment: fixed;
-  /* Fixes the background */
   background-size: cover;
   background-position: center;
+  filter: blur(0.5px);
+  /* Adjust the blur intensity as needed */
+  z-index: -1;
+  /* Places the blurred background behind content */
 }
+
 
 /* Header Styling */
 header {
@@ -37,7 +56,7 @@ header {
   /* Rounded corners */
   opacity: 0.9;
   /* Adjust transparency */
-  outline: 6px solid rgb(0, 178, 0);
+  outline: 6px solid rgba(49, 178, 49, 0.7);
   /* Green line outside the box */
   outline-offset: 7px;
   /* Space between the border and outline */
@@ -101,7 +120,7 @@ section h2 {
   object-fit: cover;
   flex-shrink: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  outline: 6px solid rgb(0, 178, 0);
+  outline: 6px solid rgba(49, 178, 49, 0.7);
   /* Green line outside the box */
   outline-offset: 5px;
   /* Space between the border and outline */
