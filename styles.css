@@ -245,7 +245,6 @@ section h2 {
   color: #000;
   /* Change this to the desired color */
   text-decoration: none;
-  /* Remove underline */
   font-weight: bold;
   /* Optional: Make it bold */
 }
@@ -322,3 +321,27 @@ footer {
 }
 
 /* Remove all contact section related styles */
+
+/* Add this to your existing CSS */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.tech-tag {
+  background-color: rgba(49, 178, 49, 0.2);
+  border: 1px solid rgba(49, 178, 49, 0.5);
+  color: #4CAF50;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background-color: rgba(49, 178, 49, 0.3);
+  transform: scale(1.05);
+}
