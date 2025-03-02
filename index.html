@@ -15,17 +15,24 @@
   <title>Luke Kulm - Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
   <header>
     <h1>Luke Kulm</h1>
     <p>Software Developer | Machine Learning Engineer | Researcher</p>
+    <div class="social-links">
+      <a href="mailto:lbk73@cornell.edu" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/luke-kulm-394920237" target="_blank" title="LinkedIn"><i
+          class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/LukeKulm" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="assets/resume.pdf" download title="Download Resume"><i class="fas fa-file-alt"></i></a>
+    </div>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -76,13 +83,13 @@
         </a>
       </h3>
       <p><strong>Fall 2024</strong></p>
-      <p>Evaluated the adversarial robustness of Meta’s I-JEPA by testing its ability
+      <p>Evaluated the adversarial robustness of Meta's I-JEPA by testing its ability
         to embed images under adversarial conditions.</p>
     </div>
 
     <div class="project">
       <h3><a href="https://www.cs.cornell.edu/courses/cs4782/2024sp/" class=project-title target="_blank"
-          rel="noopener noreferrer"> Cornell’s First Deep Learning Class for Undergraduates</a></h3>
+          rel="noopener noreferrer"> Cornell's First Deep Learning Class for Undergraduates</a></h3>
       <p><strong>Fall 2023</strong></p>
       <p>Created curriculum and course content for Cornell's inaugural undergraduate course on deep learning, CS 4782.
         Designed
@@ -99,37 +106,22 @@
       </h3>
       <p><strong>Spring 2024</strong></p>
       <p>Developed a robotic pipeline that utilizes brain signals to control robotic systems, incorporating signal
-        processing and data analysis techniques with Boston Dynamics’ Spot robot. This project explored the intersection
+        processing and data analysis techniques with Boston Dynamics' Spot robot. This project explored the intersection
         of neurotechnology and robotics.</p>
     </div>
 
     <div class="project">
-      <img src="assets/ocaml.png" alt="Conway’s Game of Ocaml project image" class="project-photo">
+      <img src="assets/ocaml.png" alt="Conway's Game of Ocaml project image" class="project-photo">
       <h3>
         <a href="https://github.com/LukeKulm/ConwaysGameOfOcaml" class=project-title target="_blank"
-          rel="noopener noreferrer"> Conway’s Game of Ocaml</a>
+          rel="noopener noreferrer"> Conway's Game of Ocaml</a>
       </h3>
       <p><strong>Spring 2023</strong></p>
       <p>Developed a cellular automata simulation using Ocaml, GitHub, and functional programming principles. This
-        project is an implementation of Conway’s Game of Life and highlights my skills in functional programming and
+        project is an implementation of Conway's Game of Life and highlights my skills in functional programming and
         algorithm design.</p>
     </div>
   </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <span class="email-obfuscate">lbk73 <em>at</em> cornell <em>dot</em> edu</span></p>
-    <p>LinkedIn: <span class="linkedin-obfuscate">linkedin <em>dot</em> com/in/luke-kulm-394920237</span></p>
-    <p><a href="assets/resume.pdf" download>Download my resume</a></p>
-  </section>
-
-  <style>
-    .email-obfuscate em,
-    .linkedin-obfuscate em {
-      font-style: normal;
-      text-decoration: underline;
-    }
-  </style>
 
   <footer>
     <p>&copy; 2024 Luke Kulm</p>
