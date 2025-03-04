@@ -41,6 +41,28 @@ body::after {
   visibility: hidden;
 }
 
+#typing-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.cursor {
+  border-right: 2px solid white;
+  /* Simulated typing cursor */
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
 svg {
   position: absolute;
   width: 0;
