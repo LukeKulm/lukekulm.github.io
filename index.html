@@ -2,9 +2,18 @@
 <html lang="en">
 
 <svg xmlns="http://www.w3.org/2000/svg">
-  <filter id="turbulence-filter">
-    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="1" seed="7" />
-    <feColorMatrix type="saturate" values="0" />
+  <filter id="filter">
+    <feTurbulence baseFrequency="0.005" numOctaves="5" seed="243" />
+    <feComponentTransfer>
+      <feFuncA type="discrete" tableValues="1 0 1 0 1 0 1 0 1 0" />
+    </feComponentTransfer>
+    <feConvolveMatrix kernelMatrix="1 0 1 
+                                    0 -4 0 
+                                    1 0 1" />
+    <feColorMatrix values="0 0 0 -1 1 
+                                    0 0 0 -1 1 
+                                    0 0 0 -1 1 
+                                    0 0 0 0 1" />
   </filter>
 </svg>
 

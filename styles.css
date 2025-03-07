@@ -28,7 +28,7 @@ body::before {
   height: 100%;
   background: none;
   z-index: -1;
-  filter: url(#turbulence-filter);
+  filter: url(#filter);
   opacity: 0.4;
 }
 
@@ -99,7 +99,6 @@ header {
 }
 
 header h1 {
-  font-style: italic;
   font-size: 4rem;
   background: linear-gradient(to right, #ffffff, #48ff00);
   -webkit-background-clip: text;
