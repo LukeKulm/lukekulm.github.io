@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #f8f8f8;
+    }
+
+    .map-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+    }
+
+    .topo-map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      pointer-events: none;
+      background-color: transparent;
+      /* Using mask to create a smooth transition */
+      mask: radial-gradient(circle, white 0%, transparent 70%);
+      -webkit-mask: radial-gradient(circle, white 0%, transparent 70%);
+      /* Apply a blur filter */
+
+      transition: mask 0.05s ease, -webkit-mask 0.05s ease, filter 0.05s ease;
+    }
+
+    .instructions {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: Arial, sans-serif;
+      color: #333;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 5px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="map-container">
+    <div class="topo-map" id="topoMap">
+      <!-- SVG with the filter that creates the topographical effect -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+        <defs>
+          <filter id="filter">
+            <feTurbulence baseFrequency="0.005" numOctaves="5" seed="243" />
+            <feComponentTransfer>
+              <feFuncA type="discrete" tableValues="1 0 1 0 1 0 1 0 1 0" />
+            </feComponentTransfer>
+            <feConvolveMatrix kernelMatrix="1 0 1 
+                                          0 -4 0 
+                                          1 0 1" />
+            <feColorMatrix values="0 0 0 -1 1 
+                                          0.2 0.2 0.2 -1 1 
+                                          0 0 0 -1 1 
+                                          0 0 0 0 1" />
+          </filter>
+        </defs>
+        <rect width="100%" height="100%" filter="url(#filter)" fill="#222" />
+      </svg>
+    </div>
+
+    <div class="instructions">Move your cursor to reveal the topographical map</div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const mapContainer = document.querySelector('.map-container');
+      const topoMap = document.getElementById('topoMap');
+
+      // Default radius for the reveal circle
+      let revealRadius = 15;
+
+      // Update the mask and blur based on mouse position
+      mapContainer.addEventListener('mousemove', function (e) {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        // Use mask to create a smooth transition
+        topoMap.style.mask = `radial-gradient(circle at ${mouseX}px ${mouseY}px, white ${revealRadius}px, transparent ${revealRadius + 200}px)`;
+        topoMap.style.webkitMask = `radial-gradient(circle at ${mouseX}px ${mouseY}px, white ${revealRadius}px, transparent ${revealRadius + 200}px)`;
+      });
+
+      // Hide the map when cursor leaves
+      mapContainer.addEventListener('mouseleave', function () {
+        topoMap.style.mask = 'radial-gradient(circle, transparent 0%, transparent 100%)';
+        topoMap.style.webkitMask = 'radial-gradient(circle, transparent 0%, transparent 100%)';
+      });
+
+      // Adjust reveal radius with scroll wheel
+      mapContainer.addEventListener('wheel', function (e) {
+        e.preventDefault();
+
+        // Increase or decrease radius based on scroll direction
+        revealRadius = Math.max(50, Math.min(300, revealRadius - e.deltaY / 3));
+
+        // Update the mask with new radius
+        const rect = mapContainer.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+        topoMap.style.mask = `radial-gradient(circle at ${mouseX}px ${mouseY}px, white ${revealRadius}px, transparent ${revealRadius + 10}px)`;
+        topoMap.style.webkitMask = `radial-gradient(circle at ${mouseX}px ${mouseY}px, white ${revealRadius}px, transparent ${revealRadius + 10}px)`;
+      });
+    });
+  </script>
+</body>
+
+</html>

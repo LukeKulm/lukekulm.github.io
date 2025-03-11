@@ -2,9 +2,18 @@
 <html lang="en">
 
 <svg xmlns="http://www.w3.org/2000/svg">
-  <filter id="turbulence-filter">
-    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="1" seed="7" />
-    <feColorMatrix type="saturate" values="0" />
+  <filter id="filter">
+    <feTurbulence baseFrequency="0.005" numOctaves="4" seed="201" />
+    <feComponentTransfer>
+      <feFuncA type="discrete" tableValues="1 0 1 0 1 0 1 0 1 0" />
+    </feComponentTransfer>
+    <feConvolveMatrix kernelMatrix="1 0 1 
+                                    0 -4 0 
+                                    1 0 1" />
+    <feColorMatrix values="0 0 0 -1 1 
+                                    0.2 0.2 0.2 -1 1 
+                                    0 0 0 -1 1 
+                                    0 0 0 0 1" />
   </filter>
 </svg>
 
@@ -43,9 +52,14 @@
     <h2>About Me</h2>
     <div class="about-content">
       <img src="assets/luke_photo.png" alt="Photo of Luke Kulm" class="profile-photo">
-      <p>Hi there, I am from Juneau, Alaska, and I study Computer Science at Cornell University. I'm a passionate
-        developer and researcher with a focus on deep learning, robotics, and AI applications. Beyond academics, I enjoy
-        spending time outdoors skiing, fishing, and hiking.</p>
+      <p>I’m Luke Kulm, a software engineer and researcher from Juneau, Alaska, currently studying Computer Science at
+        Cornell University. My passion lies in machine learning, robotics, and AI safety, where I blend theory with
+        hands-on experience. I strive to write clean code and foster strong collaboration within teams, always pushing
+        myself to learn and innovate.
+        Beyond engineering, I’m deeply interested in the intersection of technology, law, and policy, especially as it
+        relates to AI. Outside of work, you’ll find me skiing, fishing, or hiking—staying connected to the outdoors
+        whenever I can.
+      </p>
     </div>
   </section>
 
@@ -53,7 +67,7 @@
     <h2>Skills</h2>
     <h3>Programming Languages & Packages</h3>
     <ul>
-      <li>Python, PyTorch, C/C++, Ocaml, ROS, HTML/CSS</li>
+      <li>Python, PyTorch, C/C++, Ocaml, ROS, HTML/CSS, JavaScript</li>
     </ul>
     <h3>Tools & Technologies</h3>
     <ul>
@@ -81,7 +95,6 @@
         <span class="tech-tag">PyTorch</span>
         <span class="tech-tag">Linux</span>
         <span class="tech-tag">CAD</span>
-        <span class="tech-tag">GPT-4</span>
       </div>
     </div>
 

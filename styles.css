@@ -28,7 +28,7 @@ body::before {
   height: 100%;
   background: none;
   z-index: -1;
-  filter: url(#turbulence-filter);
+  filter: url(#filter);
   opacity: 0.4;
 }
 
@@ -99,8 +99,7 @@ header {
 }
 
 header h1 {
-  font-style: italic;
-  font-size: 4rem;
+  font-size: 5rem;
   background: linear-gradient(to right, #ffffff, #48ff00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -108,7 +107,7 @@ header h1 {
 
 header p {
   font-size: 1.2rem;
-  margin-top: 0.5rem;
+  margin-top: 0.02rem;
 }
 
 nav {
@@ -142,10 +141,23 @@ section h2 {
 .about-content {
   display: flex;
   align-items: center;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   gap: 1.5rem;
   text-align: left;
+  background: rgba(255, 255, 255, 0.2);
+  /* Semi-transparent white */
+  backdrop-filter: blur(4px);
+  /* Glass effect */
+  border-radius: 12px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  padding: 1.5rem;
+  width: 90%;
+  /* Responsive width */
+  text-align: center;
+  color: #333;
 }
 
 .profile-photo {
@@ -197,6 +209,19 @@ section h2 {
   /* Remove padding */
   display: inline-block;
   /* Center the list */
+  background: rgba(255, 255, 255, 0.2);
+  /* Semi-transparent white */
+  backdrop-filter: blur(4px);
+  /* Glass effect */
+  border-radius: 12px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  padding: 1.5rem;
+  width: 90%;
+  /* Responsive width */
+  text-align: center;
+  color: #333;
 }
 
 #skills li {
@@ -219,7 +244,7 @@ section h2 {
 .project {
   background: rgba(255, 255, 255, 0.2);
   /* Semi-transparent white */
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   /* Glass effect */
   border-radius: 12px;
   /* Rounded corners */
