@@ -1,22 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<svg xmlns="http://www.w3.org/2000/svg">
-  <filter id="filter">
-    <feTurbulence baseFrequency="0.005" numOctaves="4" seed="201" />
-    <feComponentTransfer>
-      <feFuncA type="discrete" tableValues="1 0 1 0 1 0 1 0 1 0" />
-    </feComponentTransfer>
-    <feConvolveMatrix kernelMatrix="1 0 1 
-                                    0 -4 0 
-                                    1 0 1" />
-    <feColorMatrix values="0 0 0 -1 1 
-                                    0.2 0.2 0.2 -1 1 
-                                    0 0 0 -1 1 
-                                    0 0 0 0 1" />
-  </filter>
-</svg>
-
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
@@ -31,6 +15,21 @@
 </head>
 
 <body>
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <filter id="filter">
+      <feTurbulence baseFrequency="0.005" numOctaves="4" seed="201" />
+      <feComponentTransfer>
+        <feFuncA type="discrete" tableValues="1 0 1 0 1 0 1 0 1 0" />
+      </feComponentTransfer>
+      <feConvolveMatrix kernelMatrix="1 0 1 
+                                      0 -4 0 
+                                      1 0 1" />
+      <feColorMatrix values="0 0 0 -1 1 
+                                      0.2 0.2 0.2 -1 1 
+                                      0 0 0 -1 1 
+                                      0 0 0 0 1" />
+    </filter>
+  </svg>
   <header>
     <h1>Luke Kulm</h1>
     <p id="typing-text"></p>
