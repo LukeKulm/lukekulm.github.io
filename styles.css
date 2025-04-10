@@ -101,6 +101,7 @@ header h1 {
   font-size: 5rem;
   background: linear-gradient(to right, #ffffff, #48ff00);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -300,6 +301,89 @@ section h2 {
   /* Optional: Underline on hover for feedback */
   color: #007bff;
   /* Optional: Change color on hover */
+}
+
+/* Experiences Section */
+#experiences {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience {
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.experience h3 {
+  color: #171717;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.experience-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.experience-header h4 {
+  font-size: 1.4rem;
+  color: #000;
+  margin: 0;
+}
+
+.date {
+  color: #666;
+  font-weight: 500;
+}
+
+.role {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.details, .description {
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.achievements {
+  list-style-position: inside;
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+.achievements li {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .date {
+    margin-top: 0.25rem;
+  }
 }
 
 /* Contact Section */
