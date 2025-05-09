@@ -358,7 +358,8 @@ section h2 {
   margin-bottom: 0.5rem;
 }
 
-.details, .description {
+.details,
+.description {
   color: #444;
   margin-bottom: 0.5rem;
 }
@@ -380,7 +381,7 @@ section h2 {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .date {
     margin-top: 0.25rem;
   }
@@ -474,4 +475,79 @@ footer {
 .tech-tag:hover {
   background-color: rgba(49, 178, 49, 0.3);
   transform: scale(1.05);
+}
+
+/* Add these new styles */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+  height: 100px;
+  /* Fixed height for consistent alignment */
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+}
+
+.skill-item i {
+  font-size: 2.5rem;
+  color: #4CAF50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+}
+
+.skill-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(76%) sepia(35%) saturate(1032%) hue-rotate(88deg) brightness(90%) contrast(87%);
+}
+
+.skill-item span {
+  font-size: 0.9rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Update the resume link styles */
+.resume-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  margin: 0 0.8rem;
+}
+
+.resume-label {
+  font-size: 0.7rem;
+  color: white;
+  opacity: 0.8;
+  line-height: 1;
+  text-align: center;
+}
+
+.resume-label span {
+  display: block;
+}
+
+.resume-link:hover .resume-label {
+  opacity: 1;
 }
