@@ -12,9 +12,7 @@ body {
   background-color: #f4f4f9;
   line-height: 1.6;
   position: relative;
-  /* Required to position the pseudo-element */
   z-index: 0;
-  /* Ensures the content remains on top */
   margin: 0;
   padding: 0;
 }
@@ -32,7 +30,6 @@ body::before {
   opacity: 0.4;
 }
 
-/* Inline SVG for feTurbulence Filter */
 body::after {
   content: "";
   position: absolute;
@@ -52,7 +49,6 @@ body::after {
 
 .cursor {
   border-right: 2px solid white;
-  /* Simulated typing cursor */
   animation: blink 0.75s step-end infinite;
 }
 
@@ -62,15 +58,12 @@ body::after {
   }
 }
 
-
 svg {
   position: absolute;
   width: 0;
   height: 0;
   visibility: hidden;
 }
-
-
 
 /* Header Styling */
 header {
@@ -85,23 +78,16 @@ header {
   padding: 4rem 1rem;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  /* Subtle shadow */
   border-radius: 12px;
-  /* Rounded corners */
   opacity: 0.9;
-  /* Adjust transparency */
   outline: 6px solid rgba(49, 178, 49, 0.7);
-  /* Green line outside the box */
   outline-offset: 7px;
-  /* Space between the border and outline */
-
 }
 
 header h1 {
   font-size: 5rem;
   background: linear-gradient(to right, #ffffff, #48ff00);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -146,16 +132,11 @@ section h2 {
   gap: 1.5rem;
   text-align: left;
   background: rgba(255, 255, 255, 0.2);
-  /* Semi-transparent white */
   backdrop-filter: blur(4px);
-  /* Glass effect */
   border-radius: 12px;
-  /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow */
   padding: 1.5rem;
   width: 90%;
-  /* Responsive width */
   text-align: center;
   color: #333;
 }
@@ -168,9 +149,7 @@ section h2 {
   flex-shrink: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   outline: 6px solid rgba(49, 178, 49, 0.7);
-  /* Green line outside the box */
   outline-offset: 5px;
-  /* Space between the border and outline */
 }
 
 .about-content p {
@@ -180,80 +159,57 @@ section h2 {
   color: #000000;
 }
 
-
 /* Skills Section */
 #skills {
   padding: 2rem 1rem;
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  /* Center all text in this section */
 }
 
 #skills h2 {
   margin-bottom: 1rem;
-  /* Add some spacing below the main title */
 }
 
 #skills h3 {
   margin-top: 1rem;
-  /* Add some spacing above the skill category titles */
   margin-bottom: 0.5rem;
-  /* Add spacing below the titles */
 }
 
 #skills ul {
   list-style-type: none;
-  /* Remove default list styling */
   padding: 0;
-  /* Remove padding */
   display: inline-block;
-  /* Center the list */
   background: rgba(255, 255, 255, 0.2);
-  /* Semi-transparent white */
   backdrop-filter: blur(4px);
-  /* Glass effect */
   border-radius: 12px;
-  /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow */
   padding: 1.5rem;
   width: 90%;
-  /* Responsive width */
   text-align: center;
   color: #333;
 }
 
 #skills li {
   margin: 0.5rem 0;
-  /* Add vertical spacing between skills */
 }
-
 
 #projects {
   padding: 2rem 1rem;
   display: grid;
-  /* Use grid layout */
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  /* Responsive grid */
   gap: 1.5rem;
-  /* Space between grid items */
   place-items: center;
 }
 
 .project {
   background: rgba(255, 255, 255, 0.2);
-  /* Semi-transparent white */
   backdrop-filter: blur(4px);
-  /* Glass effect */
   border-radius: 12px;
-  /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow */
   padding: 1.5rem;
   max-width: 600px;
   width: 90%;
-  /* Responsive width */
   text-align: center;
   color: #333;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -270,16 +226,12 @@ section h2 {
   border-radius: 8px;
   margin-bottom: 1rem;
   filter: grayscale(100%);
-  /* Start with black and white */
   transition: filter 0.3s ease, transform 0.3s ease;
-  /* Smooth transition */
 }
 
 .project:hover .project-photo {
   filter: grayscale(0%);
-  /* Full color on hover */
   transform: scale(1.05);
-  /* Slight zoom effect on hover (optional) */
 }
 
 .project p {
@@ -287,133 +239,37 @@ section h2 {
   margin: 0.5rem 0;
 }
 
-
 .project-title {
   color: #000;
-  /* Change this to the desired color */
   text-decoration: none;
   font-weight: bold;
-  /* Optional: Make it bold */
 }
 
 .project-title:hover {
   text-decoration: underline;
-  /* Optional: Underline on hover for feedback */
   color: #007bff;
-  /* Optional: Change color on hover */
-}
-
-/* Experiences Section */
-#experiences {
-  padding: 2rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.experience {
-  margin-bottom: 2rem;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-}
-
-.experience h3 {
-  color: #171717;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.experience-item {
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
-}
-
-.experience-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-
-.experience-header h4 {
-  font-size: 1.4rem;
-  color: #000;
-  margin: 0;
-}
-
-.date {
-  color: #666;
-  font-weight: 500;
-}
-
-.role {
-  font-size: 1.2rem;
-  color: #333;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.details,
-.description {
-  color: #444;
-  margin-bottom: 0.5rem;
-}
-
-.achievements {
-  list-style-position: inside;
-  margin: 1rem 0;
-  padding-left: 1rem;
-}
-
-.achievements li {
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .experience-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .date {
-    margin-top: 0.25rem;
-  }
 }
 
 /* Contact Section */
 #contact {
   padding: 2rem 1rem;
-  /* Keep padding for spacing */
   text-align: center;
-  /* Center-align content */
   background-color: transparent;
-  /* Remove background color */
   color: #333;
-  /* Optional: Match the text color with the rest of the page */
 }
 
 #contact p {
   margin: 0.5rem 0;
-  /* Maintain spacing between lines */
 }
 
 #contact a {
   color: #007bff;
-  /* Adjust the link color to stand out */
   text-decoration: none;
   font-weight: bold;
 }
 
 #contact a:hover {
   color: #0056b3;
-  /* Darken the link color on hover for better UX */
 }
 
 /* Footer */
@@ -426,15 +282,6 @@ footer {
   margin-top: 2rem;
 }
 
-
-/* Hover Effect for Projects */
-.project:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Add this after your header styles */
 .social-links {
   margin: 1rem 0;
 }
@@ -451,9 +298,6 @@ footer {
   color: #ffd700;
 }
 
-/* Remove all contact section related styles */
-
-/* Add this to your existing CSS */
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
@@ -477,77 +321,193 @@ footer {
   transform: scale(1.05);
 }
 
-/* Add these new styles */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1.5rem;
-  margin: 1rem 0;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablets and smaller (768px and below) */
+@media screen and (max-width: 768px) {
+
+  /* Header adjustments */
+  header {
+    margin: 0.5rem 10px;
+    padding: 2rem 1rem;
+    background-position-y: center;
+    outline-width: 4px;
+    outline-offset: 4px;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  #typing-text {
+    font-size: 1rem;
+    white-space: normal;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    margin: 0.3rem 0;
+    display: block;
+  }
+
+  /* About section - stack vertically */
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    outline-width: 4px;
+    outline-offset: 3px;
+  }
+
+  /* Skills section */
+  #skills {
+    padding: 1.5rem 0.5rem;
+  }
+
+  #skills ul {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  /* Projects grid - single column */
+  #projects {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 0.5rem;
+    gap: 1rem;
+  }
+
+  .project {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  /* Disable hover effects on mobile */
+  .project:hover {
+    transform: none;
+  }
+
+  .project:hover .project-photo {
+    transform: none;
+  }
+
+  /* Social links */
+  .social-links a {
+    font-size: 1.3rem;
+    margin: 0 0.5rem;
+  }
+
+  /* Section headers */
+  section h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  /* Tech tags */
+  .tech-tag {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+  }
 }
 
-.skill-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transition: transform 0.3s ease;
-  height: 100px;
-  /* Fixed height for consistent alignment */
+/* Small mobile devices (480px and below) */
+@media screen and (max-width: 480px) {
+  header {
+    margin: 0.5rem 5px;
+    padding: 1.5rem 0.5rem;
+    outline-width: 3px;
+    outline-offset: 3px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  #typing-text {
+    font-size: 0.85rem;
+  }
+
+  .about-content {
+    width: 98%;
+    padding: 0.75rem;
+  }
+
+  .about-content p {
+    font-size: 0.9rem;
+  }
+
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    outline-width: 3px;
+    outline-offset: 2px;
+  }
+
+  #skills ul {
+    width: 98%;
+    padding: 0.75rem;
+  }
+
+  .project {
+    width: 98%;
+    padding: 0.75rem;
+  }
+
+  .social-links a {
+    font-size: 1.2rem;
+    margin: 0 0.4rem;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  .tech-tags {
+    gap: 0.3rem;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  /* Adjust projects grid minimum */
+  #projects {
+    grid-template-columns: 1fr;
+  }
 }
 
-.skill-item:hover {
-  transform: scale(1.1);
-}
+/* Fix for very small devices */
+@media screen and (max-width: 360px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
 
-.skill-item i {
-  font-size: 2.5rem;
-  color: #4CAF50;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.5rem;
-}
-
-.skill-logo {
-  width: 2.5rem;
-  height: 2.5rem;
-  object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(76%) sepia(35%) saturate(1032%) hue-rotate(88deg) brightness(90%) contrast(87%);
-}
-
-.skill-item span {
-  font-size: 0.9rem;
-  color: #333;
-  text-align: center;
-}
-
-/* Update the resume link styles */
-.resume-link {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.1rem;
-  margin: 0 0.8rem;
-}
-
-.resume-label {
-  font-size: 0.7rem;
-  color: white;
-  opacity: 0.8;
-  line-height: 1;
-  text-align: center;
-}
-
-.resume-label span {
-  display: block;
-}
-
-.resume-link:hover .resume-label {
-  opacity: 1;
+  nav a {
+    font-size: 0.9rem;
+  }
 }
