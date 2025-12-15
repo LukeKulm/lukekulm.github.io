@@ -162,7 +162,7 @@ section h2 {
 /* Skills Section */
 #skills {
   padding: 2rem 1rem;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
@@ -172,28 +172,53 @@ section h2 {
 }
 
 #skills h3 {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
 }
 
-#skills ul {
-  list-style-type: none;
-  padding: 0;
-  display: inline-block;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(4px);
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  width: 90%;
-  text-align: center;
+  margin: 1rem auto;
+  max-width: 800px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill-item i {
+  font-size: 2.5rem;
+  color: #4CAF50;
+}
+
+.skill-item span {
+  font-weight: 500;
   color: #333;
+  font-size: 0.95rem;
 }
 
-#skills li {
-  margin: 0.5rem 0;
-}
-
+/* Projects Section */
 #projects {
   padding: 2rem 1rem;
   display: grid;
@@ -250,26 +275,100 @@ section h2 {
   color: #007bff;
 }
 
-/* Contact Section */
-#contact {
+/* Experiences Section */
+#experiences {
   padding: 2rem 1rem;
-  text-align: center;
-  background-color: transparent;
-  color: #333;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-#contact p {
+.experience {
+  margin-bottom: 3rem;
+}
+
+.experience h3 {
+  font-size: 1.8rem;
+  color: #4CAF50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid rgba(49, 178, 49, 0.5);
+  padding-bottom: 0.5rem;
+}
+
+.experience-item {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.experience-header h4 {
+  font-size: 1.3rem;
+  color: #333;
+  margin: 0;
+}
+
+.date {
+  font-size: 0.95rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.role {
+  font-size: 1.1rem;
+  color: #4CAF50;
+  font-weight: 600;
   margin: 0.5rem 0;
 }
 
-#contact a {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
+.details {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0.3rem 0;
 }
 
-#contact a:hover {
-  color: #0056b3;
+.description {
+  color: #666;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.achievements {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.achievements li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.achievements li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+  font-weight: bold;
 }
 
 /* Footer */
@@ -282,22 +381,59 @@ footer {
   margin-top: 2rem;
 }
 
+/* Social Links */
 .social-links {
   margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .social-links a {
   color: white;
   font-size: 1.5rem;
-  margin: 0 0.8rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .social-links a:hover {
   color: #ffd700;
+  transform: translateY(-3px);
 }
 
+/* Resume Link Special Styling */
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.resume-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffd700;
+  transform: translateY(-3px);
+}
+
+.resume-label {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Tech Tags */
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
@@ -385,9 +521,22 @@ footer {
     padding: 1.5rem 0.5rem;
   }
 
-  #skills ul {
-    width: 95%;
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
     padding: 1rem;
+  }
+
+  .skill-item {
+    padding: 0.75rem;
+  }
+
+  .skill-item i {
+    font-size: 2rem;
+  }
+
+  .skill-item span {
+    font-size: 0.85rem;
   }
 
   /* Projects grid - single column */
@@ -402,6 +551,11 @@ footer {
     padding: 1rem;
   }
 
+  /* Show project photos in color on mobile (no hover needed) */
+  .project-photo {
+    filter: grayscale(0%);
+  }
+
   /* Disable hover effects on mobile */
   .project:hover {
     transform: none;
@@ -411,10 +565,52 @@ footer {
     transform: none;
   }
 
+  /* Experiences section */
+  #experiences {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .experience h3 {
+    font-size: 1.5rem;
+  }
+
+  .experience-item {
+    padding: 1rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .experience-header h4 {
+    font-size: 1.1rem;
+  }
+
+  .role {
+    font-size: 1rem;
+  }
+
+  .achievements li {
+    font-size: 0.9rem;
+  }
+
   /* Social links */
+  .social-links {
+    gap: 0.8rem;
+  }
+
   .social-links a {
     font-size: 1.3rem;
-    margin: 0 0.5rem;
+  }
+
+  .resume-link {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .resume-label {
+    font-size: 0.7rem;
   }
 
   /* Section headers */
@@ -467,9 +663,23 @@ footer {
     outline-offset: 2px;
   }
 
-  #skills ul {
-    width: 98%;
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 0.75rem;
     padding: 0.75rem;
+  }
+
+  .skill-item {
+    padding: 0.5rem;
+  }
+
+  .skill-item i {
+    font-size: 1.5rem;
+  }
+
+  .skill-item span {
+    font-size: 0.75rem;
   }
 
   .project {
@@ -477,9 +687,39 @@ footer {
     padding: 0.75rem;
   }
 
+  /* Experiences */
+  .experience-item {
+    padding: 0.75rem;
+  }
+
+  .experience-header h4 {
+    font-size: 1rem;
+  }
+
+  .date {
+    font-size: 0.85rem;
+  }
+
+  .role {
+    font-size: 0.95rem;
+  }
+
+  .achievements li {
+    font-size: 0.85rem;
+    padding-left: 1.2rem;
+  }
+
+  /* Social links */
   .social-links a {
     font-size: 1.2rem;
-    margin: 0 0.4rem;
+  }
+
+  .resume-link {
+    padding: 0.3rem 0.6rem;
+  }
+
+  .resume-label {
+    font-size: 0.65rem;
   }
 
   section h2 {
@@ -495,7 +735,6 @@ footer {
     padding: 0.2rem 0.5rem;
   }
 
-  /* Adjust projects grid minimum */
   #projects {
     grid-template-columns: 1fr;
   }
@@ -509,5 +748,17 @@ footer {
 
   nav a {
     font-size: 0.9rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resume-label span {
+    display: none;
+  }
+
+  .resume-link i {
+    font-size: 1.2rem;
   }
 }
