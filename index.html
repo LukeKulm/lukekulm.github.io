@@ -2,15 +2,12 @@
 <html lang="en">
 
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&amp;display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luke Kulm Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="assets/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -31,8 +28,17 @@
     </filter>
   </svg>
   <header>
-    <h1>Luke Kulm</h1>
-    <p id="typing-text"></p>
+    <div class="hero-photo" aria-hidden="true">
+      <picture>
+        <source srcset="assets/banner2.webp" type="image/webp">
+        <img src="assets/banner2.jpg" alt="Mountain landscape near Juneau, Alaska" width="1800" height="1193" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="header-inner">
+      <h1>Luke Kulm</h1>
+      <p class="hero-title">Machine Learning &amp; Systems Engineer</p>
+      <p class="header-note">Making AI serve the many. I build efficient machine learning systems for real-world applications, from synthetic data and computer vision to hardware-optimized inference.</p>
+      <p class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> San Francisco, California</p>
     <div class="social-links">
       <a href="mailto:lbk73@cornell.edu" title="Email"><i class="fas fa-envelope"></i></a>
       <a href="https://linkedin.com/in/luke-kulm-394920237" target="_blank" title="LinkedIn"><i
@@ -52,87 +58,39 @@
       <a href="#projects">Projects</a>
       <a href="#experiences">Experiences</a>
     </nav>
+    </div>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
     <div class="about-content">
-      <img src="assets/luke_photo.png" alt="Photo of Luke Kulm" class="profile-photo">
-      <p>I'm Luke Kulm, I am from Juneau, Alaska and I am a Software Engineer. A few of my interests are machine
-        learning, AI safety, and robotics.
-        I’m currently focused on synthetic data, visual understanding, reinforcement learning, and how these techniques
-        can be applied to build more robust and reliable intelligent systems.
-        Beyond engineering, I'm deeply interested in the intersection of technology, law, and policy, especially as it
-        relates to AI. Outside of work, you'll find me skiing, fishing, or hiking—staying connected to the outdoors
-        whenever I can.
+      <img src="assets/luke-headshot.jpg" alt="Portrait of Luke Kulm" class="profile-photo" width="1090" height="1400" fetchpriority="high">
+      <p>I'm Luke, a machine learning engineer from Juneau, Alaska, currently working at Bucket Robotics. I work across machine learning research and systems engineering, with a focus on computer vision, synthetic data, model optimization, and deploying ML on constrained hardware.
+        Previously, I studied computer science at Cornell, where I researched multimodal robotics, helped develop an undergraduate deep learning course, and published work at ICRA.
+        I'm interested in making powerful AI systems efficient, reliable, and useful in the real world, while ensuring that advances in AI ultimately serve society well. Outside of engineering, I'm usually skiing, hiking, fishing, or biking.
       </p>
     </div>
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
-    <h3>Programming Languages & Packages</h3>
-    <div class="skills-grid">
-      <div class="skill-item">
-        <i class="fab fa-python"></i>
-        <span>Python</span>
-      </div>
-      <div class="skill-item">
-        <i class="fas fa-brain"></i>
-        <span>PyTorch</span>
-      </div>
-      <div class="skill-item">
-        <i class="fas fa-code"></i>
-        <span>C/C++</span>
-      </div>
-      <div class="skill-item">
-        <i class="fas fa-code-branch"></i>
-        <span>Ocaml</span>
-      </div>
-      <div class="skill-item">
-        <i class="fas fa-robot"></i>
-        <span>ROS</span>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-html5"></i>
-        <span>HTML</span>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-css3-alt"></i>
-        <span>CSS</span>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-js"></i>
-        <span>JavaScript</span>
-      </div>
-    </div>
-
-    <h3>Tools & Technologies</h3>
-    <div class="skills-grid">
-      <div class="skill-item">
-        <i class="fab fa-github"></i>
-        <span>GitHub</span>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-linux"></i>
-        <span>Linux</span>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-aws"></i>
-        <span>AWS</span>
-      </div>
-      <div class="skill-item">
-        <i class="fas fa-code"></i>
-        <span>VSCode</span>
-      </div>
-      <div class="skill-item">
-        <i class="fas fa-cube"></i>
-        <span>Fusion360</span>
-      </div>
-      <div class="skill-item">
-        <i class="fas fa-file-alt"></i>
-        <span>LaTeX</span>
-      </div>
+    <h2>Technical Focus</h2>
+    <div class="focus-grid">
+      <article class="focus-card">
+        <h3>ML &amp; Vision</h3>
+        <p>PyTorch <span>·</span> Computer Vision <span>·</span> Synthetic Data <span>·</span> Multimodal Models <span>·</span> Reinforcement Learning</p>
+      </article>
+      <article class="focus-card">
+        <h3>ML Systems</h3>
+        <p>C++ <span>·</span> ONNX <span>·</span> WebGPU <span>·</span> WASM <span>·</span> Model Optimization <span>·</span> Hardware-Optimized Inference</p>
+      </article>
+      <article class="focus-card">
+        <h3>Software &amp; Infrastructure</h3>
+        <p>Python <span>·</span> JavaScript <span>·</span> Ruby on Rails <span>·</span> SQL <span>·</span> PostgreSQL <span>·</span> Docker <span>·</span> AWS <span>·</span> Linux</p>
+      </article>
+      <article class="focus-card">
+        <h3>Robotics</h3>
+        <p>ROS <span>·</span> Sensor Integration <span>·</span> Robot Learning</p>
+      </article>
     </div>
   </section>
 
@@ -141,7 +99,7 @@
 
     <div class="project">
       <a href="https://arxiv.org/abs/2404.06570">
-        <img src="assets/morpheus_image.png" alt="MORPHeus project image" class="project-photo">
+        <img src="assets/morpheus_image.png" alt="MORPHeus project image" class="project-photo" loading="lazy" decoding="async">
       </a>
       <h3>
         <a href="https://arxiv.org/abs/2404.06570" class=project-title target="_blank" rel="noopener noreferrer">
@@ -164,7 +122,7 @@
     <div class="project">
       <a href="https://github.com/LukeKulm/Robots-with-Human-Preferences">
         <img src="assets/preferences.png" alt="Robot Learning from Human Preferences project image"
-          class="project-photo">
+          class="project-photo" loading="lazy" decoding="async">
       </a>
       <h3>
         <a href="https://github.com/LukeKulm/Robots-with-Human-Preferences" class="project-title" target="_blank"
@@ -190,7 +148,7 @@
 
     <div class="project">
       <a href="https://medium.com/@kulmluke/is-i-jepa-an-adversarially-robust-vision-model-110a697fdf0f">
-        <img src="assets/daisy_adv.png" alt="Adversarial Robustness of I-JEPA project image" class="project-photo">
+        <img src="assets/daisy_adv.png" alt="Adversarial Robustness of I-JEPA project image" class="project-photo" loading="lazy" decoding="async">
       </a>
       <h3>
         <a href="https://medium.com/@kulmluke/is-i-jepa-an-adversarially-robust-vision-model-110a697fdf0f"
@@ -210,7 +168,7 @@
 
     <div class="project">
       <a href="https://github.com/LukeKulm/Reinforcement-Learning-Visualization">
-        <img src="assets/rl-viz.png" alt="Reinforcement Learning Visualization photo" class="project-photo">
+        <img src="assets/rl-viz.png" alt="Reinforcement Learning Visualization photo" class="project-photo" loading="lazy" decoding="async">
       </a>
       <h3>
         <a href="https://github.com/LukeKulm/Reinforcement-Learning-Visualization" class="project-title" target="_blank"
@@ -232,7 +190,7 @@
     </div>
 
     <div class="project">
-      <img src="assets/website.png" alt="Personal Portfolio Website photo" class="project-photo">
+      <img src="assets/website.png" alt="Personal Portfolio Website photo" class="project-photo" loading="lazy" decoding="async">
       <h3>
         <a href="https://github.com/LukeKulm/lukekulm.github.io" class="project-title" target="_blank"
           rel="noopener noreferrer">
@@ -251,6 +209,7 @@
     </div>
 
     <div class="project">
+      <img src="assets/deep-learning-course.webp" alt="Watercolor illustration for Cornell's CS 4782 deep learning course" class="project-photo" loading="lazy" decoding="async" width="1024" height="1024">
       <h3><a href="https://www.cs.cornell.edu/courses/cs4782/2024sp/" class=project-title target="_blank"
           rel="noopener noreferrer"> Cornell's First Deep Learning Class for Undergraduates</a></h3>
       <p><strong>Fall 2023</strong></p>
@@ -267,7 +226,7 @@
     </div>
 
     <div class="project">
-      <img src="assets/spot.jpg" alt="BrainRobotConnect project image" class="project-photo">
+      <img src="assets/spot.jpg" alt="BrainRobotConnect project image" class="project-photo" loading="lazy" decoding="async">
       <h3>
         <a href="https://github.com/LukeKulm/BrainRobotConnect" class=project-title target="_blank"
           rel="noopener noreferrer"> BrainRobotConnect (TreeHacks
@@ -286,7 +245,7 @@
     </div>
 
     <div class="project">
-      <img src="assets/ocaml.png" alt="Conway's Game of Ocaml project image" class="project-photo">
+      <img src="assets/ocaml.png" alt="Conway's Game of Ocaml project image" class="project-photo" loading="lazy" decoding="async">
       <h3>
         <a href="https://github.com/LukeKulm/ConwaysGameOfOcaml" class=project-title target="_blank"
           rel="noopener noreferrer"> Conway's Game of Ocaml</a>
@@ -325,9 +284,15 @@
       <div class="experience-item">
         <div class="experience-header">
           <h4>Bucket Robotics</h4>
-          <span class="date">Fall 2025 – Present</span>
+          <span class="date">Fall 2025 to Present</span>
         </div>
-        <p class="role">Software Engineer</p>
+        <p class="role">Machine Learning &amp; Systems Engineer</p>
+        <p class="description">Building machine learning systems for industrial computer vision, spanning synthetic data generation, model training, inference optimization, and production deployment.</p>
+        <ul class="achievements">
+          <li>Built CAD-to-synthetic-data infrastructure supporting hundreds of models across dozens of deployments</li>
+          <li>Developed sim-to-real computer vision methods that improved real-world accuracy by approximately 20%</li>
+          <li>Optimized vision inference on constrained Intel hardware from roughly 50 seconds to 2 seconds using ONNX and hardware-optimized inference</li>
+        </ul>
         <div class="tech-tags">
           <span class="tech-tag">Python</span>
           <span class="tech-tag">Robotics</span>

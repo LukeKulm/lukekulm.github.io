@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const scrollToTopButton = document.createElement('button');
   scrollToTopButton.innerText = "Top";
+  scrollToTopButton.id = 'top-button';
   scrollToTopButton.style.position = 'fixed';
   scrollToTopButton.style.bottom = '20px';
   scrollToTopButton.style.right = '20px';
@@ -21,35 +22,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  const titles = ["Software Developer", "Machine Learning Engineer", "Researcher"];
-  let titleIndex = 0;
-  let charIndex = 0;
-  const typingSpeed = 100;
-  const delayBetweenTitles = 500;
-  const typingElement = document.getElementById("typing-text");
-
-  function typeText() {
-    if (titleIndex < titles.length) {
-      if (charIndex < titles[titleIndex].length) {
-        typingElement.innerHTML += titles[titleIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(typeText, typingSpeed);
-      } else {
-        // Move to the next title after a short delay, but don't add "|" at the end of the last title
-        charIndex = 0;
-        titleIndex++;
-        if (titleIndex < titles.length) {
-          typingElement.innerHTML += " | "; // Add separator only if there's another title
-          setTimeout(typeText, delayBetweenTitles);
-        }
-      }
-    }
-  }
-
-  typeText();
-});
-
-
-
